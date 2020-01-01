@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "12489974",
+      "name": "bread",
+      "font_class": "bread",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    }
+  ]
+}

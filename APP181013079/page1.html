@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="css/mui.min.css">
+		<style>
+			
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			.mui-bar~.mui-content .mui-fullscreen {
+				top: 44px;
+				height: auto;
+			}
+			.mui-pull-top-tips {
+				position: absolute;
+				top: -20px;
+				left: 50%;
+				margin-left: -25px;
+				width: 40px;
+				height: 40px;
+				border-radius: 100%;
+			}
+			.mui-bar~.mui-pull-top-tips {
+				top: 24px;
+			}
+			.mui-pull-top-wrapper {
+				width: 42px;
+				height: 42px;
+				display: block;
+				text-align: center;
+				background-color: #efeff4;
+				border: 1px solid #ddd;
+				border-radius: 25px;
+				background-clip: padding-box;
+				box-shadow: 0 4px 10px #bbb;
+				overflow: hidden;
+			}
+			.mui-pull-top-tips.mui-transitioning {
+				-webkit-transition-duration: 200ms;
+				transition-duration: 200ms;
+			}
+			.mui-pull-top-tips .mui-pull-loading {
+				/*-webkit-backface-visibility: hidden;
+				-webkit-transition-duration: 400ms;
+				transition-duration: 400ms;*/
+				
+				margin: 0;
+			}
+			.mui-pull-top-wrapper .mui-icon,
+			.mui-pull-top-wrapper .mui-spinner {
+				margin-top: 7px;
+			}
+			.mui-pull-top-wrapper .mui-icon.mui-reverse {
+				/*-webkit-transform: rotate(180deg) translateZ(0);*/
+			}
+			.mui-pull-bottom-tips {
+				text-align: center;
+				background-color: #efeff4;
+				font-size: 15px;
+				line-height: 40px;
+				color: #777;
+			}
+			.mui-pull-top-canvas {
+				overflow: hidden;
+				background-color: #fafafa;
+				border-radius: 40px;
+				box-shadow: 0 4px 10px #bbb;
+				width: 40px;
+				height: 40px;
+				margin: 0 auto;
+			}
+			.mui-pull-top-canvas canvas {
+				width: 40px;
+			}
+			.mui-slider-indicator.mui-segmented-control {
+				background-color: #efeff4;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">广东非遗人物志</h1>
+		</header>
+		
+		<div class="mui-content">
+			<div id="slider" class="mui-slider mui-fullscreen">
+				<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<div class="mui-scroll">
+						<a class="mui-control-item mui-active" href="#item1mobile">
+							民间文学
+						</a>
+						<a class="mui-control-item" href="#item2mobile">
+							传统音乐
+						</a>
+						<a class="mui-control-item" href="#item3mobile">
+							传统舞蹈
+						</a>
+						<a class="mui-control-item" href="#item4mobile">
+							传统戏剧
+						</a>
+						<a class="mui-control-item" href="#item5mobile">
+							曲艺
+						</a>
+						<a class="mui-control-item" href="#item6mobile">
+							传统体育、游艺与杂技
+						</a>
+						<a class="mui-control-item" href="#item7mobile">
+						</a>
+						<a class="mui-control-item" href="#item8mobile">
+							传统技艺
+						</a>
+						<a class="mui-control-item" href="#item9mobile">
+							传统医药
+						</a>
+						
+					</div>
+				</div>
+				
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+							
+							    <li class="mui-table-view-cell mui-media" id="lixiansheng">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/zhangzheyuan.jpg">
+							            <div class="mui-media-body">
+							               	 张哲源
+							                <p class="mui-ellipsis">国家非物质文化遗产灯谜项目级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							   
+							    <li class="mui-table-view-cell mui-media" id="hexichun">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/hexichun.jpg">
+							            <div class="mui-media-body">
+							                	何希春
+							                <p class="mui-ellipsis">国家非物质文化遗产雷州歌项目省级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="yeenlin">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/yeenlin.jpg">
+							            <div class="mui-media-body">
+							               	 叶恩麟
+							                <p class="mui-ellipsis">国家非物质文化遗产应人石的传说项目省级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							   
+							</div>
+						</div>
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+									<div class="mui-card">
+										<li class="mui-table-view-cell mui-media" id="xiedaoxiu">
+							        	<a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/xiedaoxiu.jpg">
+							            <div class="mui-media-body">
+							               	 谢导秀
+							                <p class="mui-ellipsis">国家非物质文化遗产古琴项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    
+							   
+							    <li class="mui-table-view-cell mui-media" id="wuzhihui">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/wuzhihui.jpg">
+							            <div class="mui-media-body">
+							               	 吴志辉
+							                <p class="mui-ellipsis">国家非物质文化遗产中山咸水歌项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="zhanggaohuai">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/zhanggaohuai.jpg">
+							            <div class="mui-media-body">
+							               	 张高徊
+							                <p class="mui-ellipsis">国家非物质文化遗产广东汉乐项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    
+							    <li class="mui-table-view-cell mui-media">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/lichongming.jpg">
+							            <div class="mui-media-body">
+							               	 李重明
+							                <p class="mui-ellipsis">国家非物质文化遗产四会民歌项目省级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/taoxingcai.jpg">
+							            <div class="mui-media-body">
+							               	 陶兴财
+							                <p class="mui-ellipsis">国家非物质文化遗产 连滩山歌项目省级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="tangluoguwu">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/tangluoguwu.jpg">
+							            <div class="mui-media-body">
+							               	 唐罗古五
+							                <p class="mui-ellipsis">国家非物质文化遗产 排瑶民歌项目省级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="liyuqing">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/liyuqing.jpg">
+							            <div class="mui-media-body">
+							               	 李玉清
+							                <p class="mui-ellipsis">国家非物质文化遗产 石塘月姐歌项目省级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="tanrunyu">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/tanrunyu.jpg">
+							            <div class="mui-media-body">
+							               	 谭闰瑜
+							                <p class="mui-ellipsis">国家非物质文化遗产 阳江山歌项目省级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="liuguoquan">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/liuguoquan.jpg">
+							            <div class="mui-media-body">
+							               	刘国权
+							                <p class="mui-ellipsis">国家非物质文化遗产 客家山歌项目省级传承人</p>
+							            </div>
+							        </a>
+							    </li>-->
+							</div>
+						</div>
+					</div>
+				</div>
+	-->
+			<div id="item3mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+								<li class="mui-table-view-cell mui-media" id="wuguanqiu">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/wuguanqiu.jpg">
+							            <div class="mui-media-body">
+							                	吴观球
+							                <p class="mui-ellipsis">国家非物质文化遗产灯舞（沙头角鱼灯舞）项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							   
+                               
+							   <li class="mui-table-view-cell mui-media" id="caizhanquan">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/caizhanquan.jpg">
+							            <div class="mui-media-body">
+							               	蔡沾权
+							                <p class="mui-ellipsis"> 国家非物质文化遗产龙舞（六坊云龙舞）项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="huangruisheng">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/huangruisheng.jpg">
+							            <div class="mui-media-body">
+							               	黄锐胜
+							                <p class="mui-ellipsis">国家非物质文化遗产龙舞（汕尾滚地金龙）项目省级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="lirongzai">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/lirongzai.jpg">
+							            <div class="mui-media-body">
+							               	李荣仔
+							                <p class="mui-ellipsis">国家非物质文化遗产 狮舞（广东醒狮）项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="yangwei">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/yangwei.jpg">
+							            <div class="mui-media-body">
+							               	杨卫
+							                <p class="mui-ellipsis">国家非物质文化遗产 潮阳英歌项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							  
+    						</div>
+						</div>
+					</div>
+					<div id="item4mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+									<li class="mui-table-view-cell mui-media" id="hongxiannv">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/hongxiannv.jpg">
+							            <div class="mui-media-body">
+							               	红线女
+							                <p class="mui-ellipsis">国家非物质文化遗产粤剧项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    
+							    <li class="mui-table-view-cell mui-media" id="wuyancheng">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/wuyancheng.jpg">
+							            <div class="mui-media-body">
+							               	吴燕城
+							                <p class="mui-ellipsis">国家非物质文化遗产采茶戏项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="dingqingbo">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/dingqingbo.jpg">
+							            <div class="mui-media-body">
+							               	丁清波
+							                <p class="mui-ellipsis">国家非物质文化遗产潮州铁枝木偶戏项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="caozhanglin">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/caozhanglin.jpeg">
+							            <div class="mui-media-body">
+							               	曹章玲
+							                <p class="mui-ellipsis">国家非物质文化遗产高州木偶戏项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="caijinzhen">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/caijinzhen.jpg">
+							            <div class="mui-media-body">
+							               	蔡锦镇
+							                <p class="mui-ellipsis">国家非物质文化遗产陆丰皮影戏项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="zhongjingjie">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/zhongjingjie.jpg">
+							            <div class="mui-media-body">
+							               	钟静洁
+							                <p class="mui-ellipsis">国家非物质文化遗产白字戏项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="yanmutian">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/yanmutian.jpg">
+							            <div class="mui-media-body">
+							               	严木田
+							                <p class="mui-ellipsis">国家非物质文化遗产西秦戏项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="zhenshunying">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/zhenshunying.jpg">
+							            <div class="mui-media-body">
+							               	郑舜英
+							                <p class="mui-ellipsis">国家非物质文化遗产潮剧项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="pengmeiying">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/pengmeiying.jpg">
+							            <div class="mui-media-body">
+							               	彭美英
+							                <p class="mui-ellipsis">国家非物质文化遗产正字戏项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    
+							    <li class="mui-table-view-cell mui-media" id="fangzhanrong">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/fangzhanrong.jpg">
+							            <div class="mui-media-body">
+							               	方展荣
+							                <p class="mui-ellipsis">国家非物质文化遗产潮剧项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="luojiabao">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/luojiabao.jpg">
+							            <div class="mui-media-body">
+							               	罗家宝
+							                <p class="mui-ellipsis">国家非物质文化遗产湛江人龙舞项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    
+    						</div>
+						</div>
+					</div>
+									
+					<div id="item5mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+									<li class="mui-table-view-cell mui-media" id="yangpeihua">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/yangpeihua.jpg">
+							            <div class="mui-media-body">
+							               	杨佩华
+							                <p class="mui-ellipsis">国家非物质文化遗产潮州歌册项目省级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+                                 
+                                     
+							    <li class="mui-table-view-cell mui-media" id="shenmanli">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/shenmanli.jpg">
+							            <div class="mui-media-body">
+							               	沈曼梨
+							                <p class="mui-ellipsis">国家非物质文化遗产粤曲项目省级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="wuyuchou">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/wuyuchou.jpg">
+							            <div class="mui-media-body">
+							               	伍于筹
+							                <p class="mui-ellipsis">国家非物质文化遗产龙舟说唱项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="youxueyao">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/youxueyao.jpg">
+							            <div class="mui-media-body">
+							               	尤学荛
+							                <p class="mui-ellipsis">国家非物质文化遗产龙舟说唱项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="xiaojianlan">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/xiaojianlan.jpg">
+							            <div class="mui-media-body">
+							               	肖建兰
+							                <p class="mui-ellipsis">国家非物质文化遗产梅县竹板歌项目省级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="zhoutianhe">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/zhoutianhe.jpg">
+							            <div class="mui-media-body">
+							               	周天和
+							                <p class="mui-ellipsis">国家非物质文化遗产竹板歌项目省级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="linshaohong">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/linshaohong.jpg">
+							            <div class="mui-media-body">
+							               	林少红
+							                <p class="mui-ellipsis">国家非物质文化遗产潮州歌册项目省级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="lizhngqiu">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/lizhongqiu.jpg">
+							            <div class="mui-media-body">
+							               	李仲球
+							                <p class="mui-ellipsis">国家非物质文化遗产木鱼歌项目省级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item6mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+									<li class="mui-table-view-cell mui-media" id="fengyanliang">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/fengyanliang.jpg">
+							            <div class="mui-media-body">
+							               	冯炎良
+							                <p class="mui-ellipsis">国家非物质文化遗产咏春拳项目省级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+                                    
+							    <li class="mui-table-view-cell mui-media" id="zouqiang">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/zouqiang.jpg">
+							            <div class="mui-media-body">
+							               	邹强
+							                <p class="mui-ellipsis">国家非物质文化遗产太虚拳项目省级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="zhongchuping">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/szhongchuping.jpg">
+							            <div class="mui-media-body">
+							               	钟楚平
+							                <p class="mui-ellipsis">国家非物质文化遗产李家教拳项目省级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="dengyongsheng">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/dengyongsheng.JPG">
+							            <div class="mui-media-body">
+							               	邓永生
+							                <p class="mui-ellipsis">国家非物质文化遗产南派花毽项目省级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    
+							    <li class="mui-table-view-cell mui-media" id="liangweiyong">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/liangweiyong.jpg">
+							            <div class="mui-media-body">
+							               	梁伟永
+							                <p class="mui-ellipsis">国家非物质文化遗产蔡李佛拳项目省级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="zhushiming">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/zhushiming.jpg">
+							            <div class="mui-media-body">
+							               	朱石明
+							                <p class="mui-ellipsis">国家非物质文化遗产九江传统龙舟项目省级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="huangliekai">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/huangliekai.jpg">
+							            <div class="mui-media-body">
+							               	黄烈楷
+							                <p class="mui-ellipsis">国家非物质文化遗产南枝拳项目省级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="linjinbing">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/linjinbing.jpg">
+							            <div class="mui-media-body">
+							               	林锦宾
+							                <p class="mui-ellipsis">国家非物质文化遗产龙形拳项目省级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item7mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+									<li class="mui-table-view-cell mui-media" id="kanghuifang">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/kanghuifang.jpg">
+							            <div class="mui-media-body">
+							               	康惠芳
+							                <p class="mui-ellipsis">国家非物质文化遗产潮绣项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+                                    
+                                     
+							    <li class="mui-table-view-cell mui-media" id="huangxuewen">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/huangxuewen.jpg">
+							            <div class="mui-media-body">
+							               	黄学文
+							                <p class="mui-ellipsis">国家非物质文化遗产核雕项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="kanghuilin">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/kanghuilin.jpg">
+							            <div class="mui-media-body">
+							               	廖惠林
+							                <p class="mui-ellipsis">国家非物质文化遗产新会葵艺项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="liwei">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/liwei.jpg">
+							            <div class="mui-media-body">
+							               	黎伟
+							                <p class="mui-ellipsis">国家非物质文化遗产彩扎项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="wuguangrang">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/wuguangrang.jpg">
+							            <div class="mui-media-body">
+							               	吴光让
+							                <p class="mui-ellipsis">国家非物质文化遗产大吴泥塑项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="luzhigao">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/luzhigao.jpg">
+							            <div class="mui-media-body">
+							               	卢芝高
+							                <p class="mui-ellipsis">国家非物质文化遗产潮州嵌瓷项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="yangyurong">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/yangyurong.jpg">
+							            <div class="mui-media-body">
+							               	杨玉榕
+							                <p class="mui-ellipsis">国家非物质文化遗产佛山彩灯项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    
+							</div>
+						</div>
+					</div>
+					<div id="item8mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+									<li class="mui-table-view-cell mui-media" id="liangzhu">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/liangzhu.jpg">
+							            <div class="mui-media-body">
+							               	梁珠
+							                <p class="mui-ellipsis">国家非物质文化遗产香云纱染整技艺项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="liangqiusheng">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/liangqiusheng.jpg">
+							            <div class="mui-media-body">
+							               	梁球胜
+							                <p class="mui-ellipsis">国家非物质文化遗产广式月饼制作技艺项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="fenghuainv">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/fenghuainv.jpg">
+							            <div class="mui-media-body">
+							               	冯怀女
+							                <p class="mui-ellipsis">国家非物质文化遗产龙舟制作技艺项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    
+							    <li class="mui-table-view-cell mui-media" id="yangxia">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/yangxia.jpg">
+							            <div class="mui-media-body">
+							               	杨虾
+							                <p class="mui-ellipsis">国家非物质文化遗产家具制作技艺项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							</div>
+						</div>
+					</div>
+					<div id="item9mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+									<li class="mui-table-view-cell mui-media" id="quyuxiang">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/quyuxiang.jpg">
+							            <div class="mui-media-body">
+							               	区欲想
+							                <p class="mui-ellipsis">国家非物质文化遗产潘高寿传统中药文化项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="keshaobin">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/keshaobin.jpg">
+							            <div class="mui-media-body">
+							               	柯少彬
+							                <p class="mui-ellipsis">国家非物质文化遗产太安堂麒麟丸制作技艺项目省级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="chenxinquan">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/chenxinquan.jpg">
+							            <div class="mui-media-body">
+							           	     陈新泉
+							                <p class="mui-ellipsis">国家非物质文化遗产罗浮山百草油制作技艺项目省级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="chenxiuhua">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/chenxiuhua.jpg">
+							            <div class="mui-media-body">
+							           	     陈秀华
+							                <p class="mui-ellipsis">国家非物质文化遗产岭南陈氏针法项目省级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="chenrongzhhong">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/chenrongzhong.jpg">
+							            <div class="mui-media-body">
+							           	     陈荣钟
+							                <p class="mui-ellipsis">国家非物质文化遗产贾氏点穴疗法项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							</div>
+						</div>
+					</div>
+					<div id="item10mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+									<li class="mui-table-view-cell mui-media" id="tangmaidugong">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="img/tangmaidugong.jpg">
+							            <div class="mui-media-body">
+							               	唐买杜公
+							                <p class="mui-ellipsis">国家非物质文化遗产瑶族耍歌堂项目国家级传承人</p>
+							            </div>
+							        </a>
+							    </li>
+							    
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+		
+		<script >
+	    mui.init();
+	    mui('body').on('tap','a',function(){document.location.href=this.href;});
+		</script>
+
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.pullToRefresh.js"></script>
+		<script src="js/mui.pullToRefresh.material.js"></script>
+		<script>
+	
+		mui.init();
+			document.getElementById('lixiansheng').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-1.html',
+				id:'lixiansheng'
+				});
+			});
+			document.getElementById('xiedaoxiu').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-2.html',
+				id:'xiedaoxiu'
+				});
+			});
+			document.getElementById('wuguanqiu').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-3.html',
+				id:'wuguanqiu'
+				});
+			});
+			document.getElementById('hongxiannv').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-4.html',
+				id:'hongxiannv'
+				});
+			});
+			document.getElementById('yangpeihua').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-5.html',
+				id:'yangpeihua'
+				});
+			});
+			document.getElementById('fengyanliang').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-6.html',
+				id:'fengyanliang'
+				});
+			});
+			document.getElementById('kanghuifang').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-7.html',
+				id:'kanghuifang'
+				});
+			});
+			document.getElementById('liangzhu').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-8.html',
+				id:'langzhu'
+				});
+			});
+			document.getElementById('quyuxiang').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-9.html',
+				id:'quyuxiang'
+				});
+			});
+			document.getElementById('tangmaidugong').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-10.html',
+				id:'tangmaidugong'
+				});
+			});
+			document.getElementById('hexichun').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-1-1.html',
+				id:'hexichun'
+				});
+			});
+			document.getElementById('yeenlin').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-1-2.html',
+				id:'yeenlin'
+				});
+			});
+			document.getElementById('wuzhihui').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-2-3.html',
+				id:'wuzhihui'
+				});
+			});
+			document.getElementById('zhanggaohuai').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-2-4.html',
+				id:'zhangaohuai'
+				});
+			});
+			document.getElementById('taoxingcai').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-2-5.html',
+				id:'taoxingcai'
+				});
+			});
+			document.getElementById('tangluoguwu').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-2-6.html',
+				id:'tangluoguwu'
+				});
+			});
+			document.getElementById('liyuqing').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-2-7.html',
+				id:'liyuqing'
+				});
+			});
+			document.getElementById('tanrunyu').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-2-8.html',
+				id:'tanrunyu'
+				});
+			});
+			document.getElementById('liuguoquan').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-2-9.html',
+				id:'liuguoquan'
+				});
+			});
+			document.getElementById('caizhanquan').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-3-1.html',
+				id:'caizhanquan'
+				});
+			});
+			document.getElementById('huangruisheng').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-3-2.html',
+				id:'huangruisheng'
+				});
+			});
+			document.getElementById('lirongzai').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-3-3.html',
+				id:'lirongzai'
+				});
+			});
+			document.getElementById('yangwei').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-3-4.html',
+				id:'yangwei'
+				});
+			});
+			document.getElementById('wuyancheng').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-4-1.html',
+				id:'wuyancheng'
+				});
+			});
+			document.getElementById('dingqingbo').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-4-2.html',
+				id:'dingqingbo'
+				});
+			});
+			document.getElementById('caozhanglin').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-4-3.html',
+				id:'dcaozhanglin'
+				});
+			});
+			document.getElementById('caijinzhen').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-4-4.html',
+				id:'caijinzhen'
+				});
+			});
+			document.getElementById('zhongjingjie').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-4-5.html',
+				id:'zhongjingjie'
+				});
+			});
+			document.getElementById('yanmutian').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-4-6.html',
+				id:'yanmutian'
+				});
+			});
+			document.getElementById('zhenshunying').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-4-7.html',
+				id:'zhenshunying'
+				});
+			});
+			document.getElementById('pengmeiying').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-4-8.html',
+				id:'pengmeiying'
+				});
+			});
+			document.getElementById('fangzhanrong').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-4-9.html',
+				id:'fangzhanrong'
+				});
+			});
+			document.getElementById('luojiabao').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-4-10.html',
+				id:'luojiabao'
+				});
+			});
+			document.getElementById('shenmanli').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-5-1.html',
+				id:'shenmanli'
+				});
+			});
+			document.getElementById('wuyuchou').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-5-2.html',
+				id:'wuyuchou'
+				});
+			});
+			document.getElementById('youxueyao').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-5-3.html',
+				id:'youxueyao'
+				});
+			});
+			document.getElementById('xiaojianlan').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-5-4.html',
+				id:'xiaojianlan'
+				});
+			});
+			document.getElementById('zhoutianhe').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-5-5.html',
+				id:'zhoutianhe'
+				});
+			});
+			document.getElementById('linshaohong').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-5-6.html',
+				id:'linshaohong'
+				});
+			});
+			document.getElementById('lizhngqiu').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-5-7.html',
+				id:'lizhngqiu'
+				});
+			});
+			document.getElementById('zouqiang').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-6-1.html',
+				id:'zouqiang'
+				});
+			});
+			document.getElementById('zhongchuping').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-6-2.html',
+				id:'zhongchuping'
+				});
+			});
+			document.getElementById('dengyongsheng').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-6-3.html',
+				id:'dengyongsheng'
+				});
+			});
+			document.getElementById('liangweiyong').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-6-4.html',
+				id:'liangweiyong'
+				});
+			});
+			document.getElementById('zhushiming').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-6-5.html',
+				id:'zhushiming'
+				});
+			});
+			document.getElementById('huangliekai').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-6-6.html',
+				id:'huangliekai'
+				});
+			});
+			document.getElementById('linjinbing').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-6-7.html',
+				id:'linjinbing'
+				});
+			});
+			document.getElementById('huangxuewen').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-7-1.html',
+				id:'huangxuewen'
+				});
+			});
+			document.getElementById('kanghuilin').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-7-2.html',
+				id:'kanghuilin'
+				});
+			});
+			document.getElementById('liwei').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-7-3.html',
+				id:'liwei'
+				});
+			});
+			document.getElementById('wuguangrang').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-7-4.html',
+				id:'wuguangrang'
+				});
+			});
+			document.getElementById('luzhigao').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-7-5.html',
+				id:'luzhigao'
+				});
+			});
+			document.getElementById('yangyurong').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-7-6.html',
+				id:'yangyurong'
+				});
+			});
+			document.getElementById('liangqiusheng').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-8-1.html',
+				id:'liangqiusheng'
+				});
+			});
+			document.getElementById('fenghuainv').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-8-2.html',
+				id:'fenghuainv'
+				});
+			});
+			document.getElementById('yangxia').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-8-3.html',
+				id:'yangxia'
+				});
+			});
+			document.getElementById('keshaobin').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-9-1.html',
+				id:'keshaobin'
+				});
+			});
+			document.getElementById('chenxinquan').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-9-2.html',
+				id:'chenxinquan'
+				});
+			});
+			document.getElementById('chenxiuhua').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-9-3.html',
+				id:'chenxiuhua'
+				});
+			});
+			document.getElementById('chenrongzhhong').addEventListener('tap',function(){
+			mui.openWindow({
+				url:'page2-9-4.html',
+				id:'chenrongzhong'
+				});
+			});
+			(function($) {
+				//阻尼系数
+				var deceleration = mui.os.ios?0.003:0.0009;
+				$('.mui-scroll-wrapper').scroll({
+					//bounce: false,//滚动条是否有弹力默认是true
+					indicators: true, //是否显示滚动条,默认是true
+					deceleration:deceleration
+				});
+				
+			})(mui);
+		</script>
+	 
+   
+	</body>
+
+</html>
+
